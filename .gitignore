@@ -3,5 +3,5 @@ __pycache__/
 venv/
 .venv/
 .DS_Store
-data/*.xlsx
+data/clinical_supplements/*.xlsx
 outputs/

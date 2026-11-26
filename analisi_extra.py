@@ -544,7 +544,7 @@ def sez_shap():
          "Alla diagnosi le cinque variabili con maggiore importanza aggregata sono: " + ", ".join(lab(v) for v in top["Diag"]) + ". Nello scenario post-induzione sono: "
          + ", ".join(lab(v) for v in top["Post"]) + (". Compaiono tra le prime cinque solo nel secondo scenario: " + ", ".join(lab(v) for v in nuove) + ".\n" if nuove else ".\n")
          + ("Il gruppo di rischio è assegnato in genere in base alle caratteristiche genetiche e alla risposta all'induzione, e determina l'intensità della terapia ricevuta: "
-            "riassume quindi informazioni già presenti tra le altre variabili, e la sua elevata importanza va interpretata con cautela (da verificare sulle regole di assegnazione del protocollo).\n"
+            "riassume quindi informazioni già presenti tra le altre variabili, e la sua elevata importanza va interpretata con cautela , poiché riflette anche le regole di assegnazione del protocollo clinico.\n"
             if "Risk group" in top["Post"] else ""),
          figura("shap_per_variabile.pdf", "Importanza SHAP aggregata per variabile (XGBoost addestrato su tutti i dati dello scenario).", "fig:shapvar"),
          "\\subsection{Valori SHAP nello scenario post-induzione}",
